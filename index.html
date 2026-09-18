@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Степан Иордаки</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f1ec;
+    color: #222;
+}
+
+header {
+    background: #1f1f1f;
+    color: white;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 12px;
+    font-size: 20px;
+    color: #d6d6d6;
+}
+
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a33;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.about {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.about h2,
+.articles h2 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 25px;
+    background: #ddd;
+}
+
+.articles {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.article {
+    border-left: 5px solid #333;
+    padding: 15px 20px;
+    margin: 20px 0;
+    background: #f7f7f7;
+}
+
+.article h3 {
+    margin-top: 0;
+    font-size: 23px;
+}
+
+.article p {
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+footer {
+    margin-top: 50px;
+    background: #1f1f1f;
+    color: #ccc;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 34px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>СТЕПАН ИОРДАКИ</h1>
+    <p>Думаю. Говорю. Пишу.</p>
+</header>
+
+<nav>
+    <a href="#about">Обо мне</a>
+    <a href="#articles">Мои статьи</a>
+    <a href="#contacts">Контакты</a>
+</nav>
+
+<div class="container">
+
+    <section class="about" id="about">
+        <h2>Обо мне</h2>
+
+        <!-- Здесь позже поставим вашу фотографию -->
+
+        <p>
+            Добро пожаловать на мою авторскую страницу.
+        </p>
+
+        <p>
+            Здесь я публикую свои мысли, наблюдения,
+            статьи и собственный взгляд на происходящее.
+        </p>
+    </section>
+
+    <section class="articles" id="articles">
+        <h2>Мои статьи</h2>
+
+        <div class="article">
+            <h3>Здесь появится первая статья</h3>
+            <p>
+                Здесь мы будем размещать ваши публикации.
+                Текст можно будет постепенно добавлять и менять.
+            </p>
+        </div>
+
+        <div class="article">
+            <h3>Новые мысли и публикации</h3>
+            <p>
+                Этот раздел предназначен для новых материалов.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="about" id="contacts">
+        <h2>Контакты</h2>
+
+        <p>
+            Мой Telegram:
+        </p>
+
+        <a class="button"
+           href="https://t.me/Dumai_svobod"
+           target="_blank">
+           Перейти в Telegram
+        </a>
+    </section>
+
+</div>
+
+<footer>
+    © Степан Иордаки
+</footer>
+
+</body>
+</html>
