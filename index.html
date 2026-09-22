@@ -4,7 +4,7 @@
 
 <title>Степан Иордаки — Думаю. Говорю. Пишу.</title>
 
-<style> * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #eef2f7; color: #222; line-height: 1.65; } header { background: #123b63; color: white; text-align: center; padding: 35px 20px 45px; } .author-photo { width: 230px; height: 230px; object-fit: cover; border-radius: 50%; border: 6px solid white; box-shadow: 0 5px 20px rgba(0,0,0,0.25); margin-bottom: 20px; } header h1 { margin: 0; font-size: 48px; letter-spacing: 2px; } header p { margin: 10px 0 0; font-size: 23px; font-weight: bold; } nav { background: white; padding: 15px 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.10); position: sticky; top: 0; z-index: 10; } nav a { color: #123b63; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 17px; } nav a:hover { text-decoration: underline; } .container { max-width: 1000px; margin: 35px auto; padding: 0 20px; } section { background: white; padding: 35px; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); } h2 { color: #123b63; font-size: 32px; margin-top: 0; border-bottom: 2px solid #dbe3ec; padding-bottom: 10px; } .about-text { font-size: 19px; } .article { margin-top: 25px; } .article h3 { color: #123b63; font-size: 28px; line-height: 1.25; margin-bottom: 8px; } .article-subtitle { font-weight: bold; font-size: 18px; } .article p { font-size: 18px; } .add-button { display: inline-block; background: #123b63; color: white; text-decoration: none; padding: 10px 18px; border-radius: 6px; font-weight: bold; margin-bottom: 15px; } .add-button:hover { background: #0d2d4b; } footer { background: #123b63; color: white; text-align: center; padding: 25px; margin-top: 40px; } @media (max-width: 650px) { header h1 { font-size: 34px; } header p { font-size: 19px; } .author-photo { width: 190px; height: 190px; } nav a { display: inline-block; margin: 5px 8px; } section { padding: 22px; } h2 { font-size: 27px; } .article h3 { font-size: 24px; } } </style>
+<style> * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #eef2f7; color: #222; line-height: 1.65; } header { background: #123b63; color: white; text-align: center; padding: 35px 20px 45px; } .author-photo { width: 230px; height: 230px; object-fit: cover; border-radius: 50%; border: 6px solid white; box-shadow: 0 5px 20px rgba(0,0,0,0.25); margin-bottom: 20px; } header h1 { margin: 0; font-size: 48px; letter-spacing: 2px; } header p { margin: 10px 0 0; font-size: 23px; font-weight: bold; } nav { background: white; padding: 15px 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.10); position: sticky; top: 0; z-index: 10; } nav a { color: #123b63; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 17px; cursor: pointer; } nav a:hover { text-decoration: underline; } .container { max-width: 1000px; margin: 35px auto; padding: 0 20px; } section { background: white; padding: 35px; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); } h2 { color: #123b63; font-size: 32px; margin-top: 0; border-bottom: 2px solid #dbe3ec; padding-bottom: 10px; } .about-text { font-size: 19px; } .article { margin-top: 25px; } .article h3 { color: #123b63; font-size: 28px; line-height: 1.25; margin-bottom: 8px; } .article-subtitle { font-weight: bold; font-size: 18px; } .article p { font-size: 18px; } .add-button { display: inline-block; background: #123b63; color: white; text-decoration: none; padding: 10px 18px; border-radius: 6px; font-weight: bold; margin-bottom: 15px; border: none; font-size: 16px; cursor: pointer; } .add-button:hover { background: #0d2d4b; } .add-form { display: none; margin-top: 15px; padding: 25px; background: #f4f7fa; border: 1px solid #dbe3ec; border-radius: 10px; } .add-form input, .add-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #bfc9d4; border-radius: 6px; font-family: Arial, Helvetica, sans-serif; font-size: 17px; } .add-form textarea { min-height: 250px; resize: vertical; } .publish-button { background: #123b63; color: white; border: none; padding: 11px 20px; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; } .cancel-button { background: #777; color: white; border: none; padding: 11px 20px; border-radius: 6px; font-size: 16px; margin-left: 8px; cursor: pointer; } footer { background: #123b63; color: white; text-align: center; padding: 25px; margin-top: 40px; } @media (max-width: 650px) { header h1 { font-size: 34px; } header p { font-size: 19px; } .author-photo { width: 190px; height: 190px; } nav a { display: inline-block; margin: 5px 8px; } section { padding: 22px; } h2 { font-size: 27px; } .article h3 { font-size: 24px; } } </style>
 
 </head>
 
@@ -18,7 +18,7 @@
 
 </header>
 
-<nav> <a href="#top">Главная</a> <a href="#about">Обо мне</a> <a href="#articles">Мои статьи</a> <a href="#articles">+ Добавить статью</a> </nav>
+<nav> <a href="#top">Главная</a> <a href="#about">Обо мне</a> <a href="#articles">Мои статьи</a> <a href="#add-article" onclick="openForm(); return false;">+ Добавить статью</a> </nav>
 
 <div class="container">
 
@@ -53,7 +53,21 @@
 
 <h2>Мои статьи и материалы</h2>
 
-<a class="add-button" href="#articles">+ Добавить новую статью</a>
+<button class="add-button" onclick="openForm()">+ Добавить новую статью</button>
+
+<div class="add-form" id="addForm">
+
+    <input type="text" id="newTitle" placeholder="Заголовок статьи">
+
+    <textarea id="newText" placeholder="Вставьте сюда текст статьи"></textarea>
+
+    <button class="publish-button" onclick="addArticle()">Опубликовать</button>
+
+    <button class="cancel-button" onclick="closeForm()">Отмена</button>
+
+</div>
+
+<div id="newArticles"></div>
 
 <article class="article">
 
@@ -140,6 +154,8 @@
 
 </div>
 
-<footer> © Степан Иордаки </footer>
+<footer> © Степан Иордаки · Думаю. Говорю. Пишу. </footer>
+
+<script> function openForm() { document.getElementById("addForm").style.display = "block"; document.getElementById("addForm").scrollIntoView({behavior: "smooth"}); } function closeForm() { document.getElementById("addForm").style.display = "none"; } function addArticle() { const title = document.getElementById("newTitle").value.trim(); const text = document.getElementById("newText").value.trim(); if (!title || !text) { alert("Введите заголовок и текст статьи."); return; } const article = document.createElement("article"); article.className = "article"; const titleElement = document.createElement("h3"); titleElement.textContent = title; article.appendChild(titleElement); const paragraphs = text.split(/\n+/); paragraphs.forEach(function(paragraph) { if (paragraph.trim()) { const p = document.createElement("p"); p.textContent = paragraph.trim(); article.appendChild(p); } }); document.getElementById("newArticles").prepend(article); document.getElementById("newTitle").value = ""; document.getElementById("newText").value = ""; closeForm(); article.scrollIntoView({behavior: "smooth"}); } </script>
 
 </body> </html>
