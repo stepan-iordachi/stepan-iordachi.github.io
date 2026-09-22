@@ -1,169 +1,145 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<html lang="ru"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Степан Иордаки — Думаю. Говорю. Пишу.</title>
 
-<style>
-* {
-    box-sizing: border-box;
-}
+<style> * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #eef2f7; color: #222; line-height: 1.65; } header { background: #123b63; color: white; text-align: center; padding: 35px 20px 45px; } .author-photo { width: 230px; height: 230px; object-fit: cover; border-radius: 50%; border: 6px solid white; box-shadow: 0 5px 20px rgba(0,0,0,0.25); margin-bottom: 20px; } header h1 { margin: 0; font-size: 48px; letter-spacing: 2px; } header p { margin: 10px 0 0; font-size: 23px; font-weight: bold; } nav { background: white; padding: 15px 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.10); position: sticky; top: 0; z-index: 10; } nav a { color: #123b63; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 17px; } nav a:hover { text-decoration: underline; } .container { max-width: 1000px; margin: 35px auto; padding: 0 20px; } section { background: white; padding: 35px; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); } h2 { color: #123b63; font-size: 32px; margin-top: 0; border-bottom: 2px solid #dbe3ec; padding-bottom: 10px; } .about-text { font-size: 19px; } .article { margin-top: 25px; } .article h3 { color: #123b63; font-size: 28px; line-height: 1.25; margin-bottom: 8px; } .article-subtitle { font-weight: bold; font-size: 18px; } .article p { font-size: 18px; } .add-button { display: inline-block; background: #123b63; color: white; text-decoration: none; padding: 10px 18px; border-radius: 6px; font-weight: bold; margin-bottom: 15px; } .add-button:hover { background: #0d2d4b; } footer { background: #123b63; color: white; text-align: center; padding: 25px; margin-top: 40px; } @media (max-width: 650px) { header h1 { font-size: 34px; } header p { font-size: 19px; } .author-photo { width: 190px; height: 190px; } nav a { display: inline-block; margin: 5px 8px; } section { padding: 22px; } h2 { font-size: 27px; } .article h3 { font-size: 24px; } } </style>
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f2f4f7;
-    color: #222;
-}
-
-header {
-    background: #123b63;
-    color: white;
-    text-align: center;
-    padding: 45px 20px 50px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 46px;
-    letter-spacing: 2px;
-}
-
-header p {
-    margin: 12px 0 0;
-    font-size: 22px;
-}
-
-nav {
-    background: white;
-    text-align: center;
-    padding: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-nav a {
-    color: #123b63;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 18px;
-    font-size: 17px;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.photo-box {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.photo {
-    width: 260px;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 6px solid white;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.2);
-}
-
-section {
-    background: white;
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-}
-
-h2 {
-    color: #123b63;
-    font-size: 30px;
-    margin-top: 0;
-}
-
-.articles p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-footer {
-    background: #123b63;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 50px;
-}
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 32px;
-    }
-
-    header p {
-        font-size: 18px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 7px 10px;
-    }
-
-    .photo {
-        width: 210px;
-        height: 210px;
-    }
-}
-</style>
 </head>
 
-<body>
+<body id="top">
 
-<header>
-    <h1>СТЕПАН ИОРДАКИ</h1>
-    <p>Думаю. Говорю. Пишу.</p>
+<header> <img src="foto.jpg" alt="Степан Иордаки" class="author-photo">
+
+<h1>СТЕПАН ИОРДАКИ</h1>
+
+<p>Думаю. Говорю. Пишу.</p>
+
 </header>
 
-<nav>
-    <a href="#about">Обо мне</a>
-    <a href="#articles">Мои статьи и материалы</a>
-</nav>
+<nav> <a href="#top">Главная</a> <a href="#about">Обо мне</a> <a href="#articles">Мои статьи</a> <a href="#articles">+ Добавить статью</a> </nav>
 
 <div class="container">
 
-    <div class="photo-box">
-        <img src="foto.jpg" alt="Степан Иордаки" class="photo">
-    </div>
+<section id="about">
 
-    <section id="about">
-        <h2>Обо мне</h2>
-        <p>
-            Здесь будет размещён текст о Степане Иордаки,
-            его взглядах, интересах и авторской работе.
-        </p>
-    </section>
+<h2>Обо мне</h2>
 
-    <section id="articles" class="articles">
-        <h2>Мои статьи и материалы</h2>
+<div class="about-text">
+    <p>Я Степан Иордаки.</p>
 
-        <p>
-            Здесь будут публиковаться мои статьи, фотографии,
-            фотоматериалы с подписями, заметки и мысли.
-        </p>
+    <p>
+    Пишу о том, что вижу вокруг себя и что считаю важным для общества.
+    </p>
 
-        <p>
-            Новые материалы будут появляться здесь постепенно.
-        </p>
-    </section>
+    <p>
+    Меня интересуют жизнь людей, проблемы страны, решения власти,
+    экономика, социальные вопросы и события, которые непосредственно
+    затрагивают каждого из нас.
+    </p>
+
+    <p>
+    Не претендую на абсолютную истину. Высказываю своё мнение,
+    задаю вопросы и стараюсь говорить прямо — без лишних украшений.
+    </p>
+
+    <p><strong>Думаю. Говорю. Пишу.</strong></p>
+</div>
+
+</section>
+
+<section id="articles">
+
+<h2>Мои статьи и материалы</h2>
+
+<a class="add-button" href="#articles">+ Добавить новую статью</a>
+
+<article class="article">
+
+    <h3>СТРИЖКА ОВЕЦ ЕЩЕ НЕ НАЧАЛАСЬ!</h3>
+
+    <p class="article-subtitle">
+    Для быстрого и успешного вступления в ЕС Молдова должна изменить свое
+    законодательство под стандарты Евросоюза.
+    </p>
+
+    <p>И это правильно.</p>
+
+    <p>
+    Страны разные, история не одинакова, обычаи, стиль жизни,
+    а отсюда и разброс в доме получается.
+    </p>
+
+    <p>
+    Поэтому и приходится всех стричь одинаково, установить единые правила и законы.
+    </p>
+
+    <p>А нужно ли менять законодательство?</p>
+
+    <p><strong>Да! Нужно</strong></p>
+
+    <p>
+    И Парламенту придется упорно работать в этом направлении.
+    </p>
+
+    <p>
+    Нет в стране ни одной сферы где не придется что-то менять.
+    </p>
+
+    <p>
+    Если Законы ЕС правильные и справедливые, а наши приходится в корень менять,
+    то что это за страна и почему принимала на протяжении стольких лет такие
+    антигуманные и антинародные правила жизни которые никак не стыкуются
+    с законами ЕС?
+    </p>
+
+    <p>
+    Выходит, страна давила народ своими запретами, раз сейчас вынуждена менять
+    и аннулировать их.
+    </p>
+
+    <p>
+    По-моему народ это не стадо и так жестоко обращаться с ним никому не позволено
+    и власти надо бы ответить за содеянное.
+    </p>
+
+    <p>
+    Выходит, меняя нынешние законы власть признает свои ошибки и вынуждена
+    под давлением ЕС освободить народ из под удушающего властного гнета.
+    </p>
+
+    <p>
+    Не зря ЕС требует проведение реальных реформ, вот и посмотрим насколько
+    «наши» готовы их проводить.
+    </p>
+
+    <p>
+    Если цель — развитие и усиление государства, то реформы должны быть
+    продуманы и честно объяснены обществу.
+    </p>
+
+    <p>
+    Если же цель — просто быстрее «отчитаться» о движении в сторону ЕС,
+    тогда страна рискует получить лишь красивую витрину и народный гнев.
+    </p>
+
+    <p>
+    <strong>
+    Время думать. Время задавать вопросы. Время говорить свободно.
+    </strong>
+    </p>
+
+    <p><strong>Не верю я Вам робяты.</strong></p>
+
+    <p>© Степан Иордаки</p>
+
+</article>
+
+</section>
 
 </div>
 
-<footer>
-    © Степан Иордаки
-</footer>
+<footer> © Степан Иордаки </footer>
 
-</body>
-</html>
+</body> </html>
