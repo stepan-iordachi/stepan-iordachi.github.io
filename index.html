@@ -3,214 +3,288 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Степан Иордаки</title>
+<title>Степан Иордаки — Думаю. Говорю. Пишу.</title>
+<meta name="description" content="Степан Иордаки. Думаю. Говорю. Пишу.">
 
 <style>
-* {
-    box-sizing: border-box;
+:root{
+  --blue:#0b3d91;
+  --blue-dark:#082b67;
+  --blue-light:#eaf2ff;
+  --text:#172033;
+  --muted:#667085;
+  --white:#fff;
+  --line:#dbe4f0;
 }
 
-body {
-    margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    background: #f3f0ea;
-    color: #222;
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  color:var(--text);
+  background:#f4f7fb;
+  line-height:1.6;
 }
 
-header {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 55px 20px;
+.header{
+  background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+  color:#fff;
+  padding:42px 20px 34px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 64px;
-    letter-spacing: 3px;
+.header-inner{
+  max-width:1050px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:36px;
 }
 
-header p {
-    margin: 15px 0 0;
-    font-size: 25px;
-    font-style: italic;
+.photo-wrap{
+  flex:0 0 210px;
+  width:210px;
+  height:210px;
+  border-radius:50%;
+  overflow:hidden;
+  background:#d7e4f7;
+  border:6px solid rgba(255,255,255,.9);
+  box-shadow:0 12px 30px rgba(0,0,0,.22);
 }
 
-.container {
-    max-width: 1050px;
-    margin: auto;
-    padding: 45px 20px 70px;
+.photo-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
-.photo {
-    text-align: center;
-    margin-bottom: 50px;
+.photo-fallback{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  color:#36527d;
+  font-weight:bold;
+  background:#dfeaf9;
 }
 
-.photo img {
-    width: 100%;
-    max-width: 560px;
-    border: 10px solid white;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+.title{
+  margin:0;
+  font-size:clamp(42px,7vw,76px);
+  line-height:.98;
+  letter-spacing:1px;
+  font-weight:800;
+  text-transform:uppercase;
 }
 
-section {
-    background: white;
-    padding: 35px;
-    margin-bottom: 30px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+.tagline{
+  margin:14px 0 0;
+  font-size:clamp(20px,3vw,30px);
+  font-weight:600;
 }
 
-h2 {
-    font-size: 34px;
-    margin-top: 0;
-    border-bottom: 2px solid #222;
-    padding-bottom: 10px;
+.nav{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 2px 10px rgba(0,0,0,.04);
 }
 
-h3 {
-    font-size: 30px;
-    margin-top: 25px;
+.nav-inner{
+  max-width:1050px;
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  padding:12px 16px;
 }
 
-p {
-    font-size: 19px;
-    line-height: 1.7;
+.nav a{
+  color:var(--blue-dark);
+  text-decoration:none;
+  font-weight:700;
+  padding:8px 15px;
+  border-radius:999px;
 }
 
-footer {
-    background: #222;
-    color: #ddd;
-    text-align: center;
-    padding: 25px;
+.nav a:hover{
+  background:var(--blue-light);
+  color:var(--blue);
 }
 
-@media (max-width: 700px) {
-    header h1 {
-        font-size: 42px;
-    }
+.container{
+  max-width:1050px;
+  margin:0 auto;
+  padding:42px 20px 65px;
+}
 
-    header p {
-        font-size: 20px;
-    }
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:30px;
+  box-shadow:0 8px 28px rgba(16,45,90,.07);
+  margin-bottom:28px;
+}
 
-    section {
-        padding: 25px;
-    }
+h2{
+  margin:0 0 18px;
+  color:var(--blue-dark);
+  font-size:32px;
+}
+
+.about p{
+  font-size:19px;
+  margin:0;
+  color:#374151;
+}
+
+.intro{
+  font-size:17px;
+  color:var(--muted);
+  margin-top:-5px;
+  margin-bottom:24px;
+}
+
+.articles{
+  display:grid;
+  gap:16px;
+}
+
+.article{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:22px;
+  background:#fbfdff;
+}
+
+.article h3{
+  margin:0 0 8px;
+  font-size:22px;
+  line-height:1.25;
+  color:var(--blue-dark);
+}
+
+.article p{
+  margin:0;
+  color:#4b5563;
+}
+
+.footer{
+  background:var(--blue-dark);
+  color:#dce8fb;
+  text-align:center;
+  padding:26px 15px;
+}
+
+.small{
+  font-size:14px;
+  opacity:.9;
+}
+
+@media (max-width:700px){
+  .header-inner{
+    flex-direction:column;
+    text-align:center;
+    gap:18px;
+  }
+
+  .photo-wrap{
+    width:180px;
+    height:180px;
+    flex-basis:180px;
+  }
+
+  .container{
+    padding:25px 14px 45px;
+  }
+
+  .card{
+    padding:22px;
+    border-radius:18px;
+  }
+
+  h2{
+    font-size:27px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>СТЕПАН ИОРДАКИ</h1>
-    <p>Думаю. Говорю. Пишу.</p>
+<header class="header">
+  <div class="header-inner">
+
+    <div class="photo-wrap">
+      <img src="foto.jpg" alt="Степан Иордаки"
+      onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-fallback\'>Здесь будет<br>фотография<br>Степана Иордаки</div>'">
+    </div>
+
+    <div>
+      <h1 class="title">СТЕПАН ИОРДАКИ</h1>
+      <p class="tagline">Думаю. Говорю. Пишу.</p>
+    </div>
+
+  </div>
 </header>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#about">Обо мне</a>
+    <a href="#articles">Мои статьи и материалы</a>
+  </div>
+</nav>
 
 <main class="container">
 
-    <div class="photo">
-        <img src="foto.jpg" alt="Степан Иордаки">
+  <section class="card about" id="about">
+    <h2>Обо мне</h2>
+    <p>Здесь будет твой текст о себе. Его можно будет заменить на любой текст без изменения оформления сайта.</p>
+  </section>
+
+  <section class="card" id="articles">
+    <h2>Мои статьи и материалы</h2>
+
+    <p class="intro">
+      Здесь будут статьи, фотографии, фотоматериалы с подписями,
+      заметки и другие публикации.
+    </p>
+
+    <div class="articles">
+
+      <article class="article">
+        <h3>Здесь появится первая статья</h3>
+        <p>
+          Когда будет готов текст, его можно разместить здесь.
+          Остальное оформление сайта останется прежним.
+        </p>
+      </article>
+
+      <article class="article">
+        <h3>Новые мысли и публикации</h3>
+        <p>
+          Новые материалы можно добавлять ниже — один за другим.
+        </p>
+      </article>
+
     </div>
-
-    <section>
-        <h2>Обо мне</h2>
-
-        <p>Я Степан Иордаки.</p>
-
-        <p>
-            Пишу о том, что вижу вокруг себя и что считаю важным для общества.
-        </p>
-
-        <p>
-            Меня интересуют жизнь людей, проблемы страны, решения власти,
-            экономика, социальные вопросы и события, которые непосредственно
-            затрагивают каждого из нас.
-        </p>
-
-        <p>
-            Не претендую на абсолютную истину. Высказываю своё мнение,
-            задаю вопросы и стараюсь говорить прямо — без лишних украшений.
-        </p>
-
-        <p><strong>Думаю. Говорю. Пишу.</strong></p>
-    </section>
-
-    <section>
-        <h2>Мои статьи и материалы</h2>
-
-        <h3>СТРИЖКА ОВЕЦ ЕЩЕ НЕ НАЧАЛАСЬ!</h3>
-
-        <p>
-            Для быстрого и успешного<br>
-            вступления в ЕС Молдова должна изменить свое законодательство под стандарты Евросоюза.
-        </p>
-
-        <p>И это правильно.</p>
-
-        <p>
-            Страны разные, история не одинакова, обычаи, стиль жизни, а отсюда и разброс в доме получается.
-        </p>
-
-        <p>
-            Поэтому и приходится всех стричь одинаково, установить единые правила и законы.
-        </p>
-
-        <p>
-            А нужно ли менять законодательство?
-        </p>
-
-        <p>Да! Нужно</p>
-
-        <p>
-            И Парламенту придется упорно работать в этом направлении.
-        </p>
-
-        <p>
-            Нет в стране ни одной сферы где не придется что-то менять.
-        </p>
-
-        <p>
-            Если Законы ЕС правильные и справедливые, а наши приходится в корень менять, то что это за страна и почему принимала на протяжении стольких лет такие антигуманные и антинародные правила жизни которые никак не стыкуются с законами ЕС?
-        </p>
-
-        <p>
-            Выходит, страна давила народ своими запретами, раз сейчас вынуждена менять и аннулировать их.
-        </p>
-
-        <p>
-            По-моему народ это не стадо и так жестоко обращаться с ним никому не позволено и власти надо бы ответить за содеянное.
-        </p>
-
-        <p>
-            Выходит, меняя нынешние законы власть признает свои ошибки и вынуждена под давлением ЕС освободить народ из под удушающего властного гнета.
-        </p>
-
-        <p>
-            Не зря ЕС требует проведение реальных реформ, вот и посмотрим насколько «наши» готовы их проводить.
-        </p>
-
-        <p>
-            Если цель — развитие и усиление государства, то реформы должны быть продуманы и честно объяснены обществу.
-        </p>
-
-        <p>
-            Если же цель — просто быстрее «отчитаться» о движении в сторону ЕС, тогда страна рискует получить лишь красивую витрину и народный гнев.
-        </p>
-
-        <p>
-            Время думать. Время задавать вопросы. Время говорить свободно.
-        </p>
-
-        <p><strong>Не верю я Вам робяты.</strong></p>
-
-    </section>
+  </section>
 
 </main>
 
-<footer>
-    © Степан Иордаки
+<footer class="footer">
+  <div>© Степан Иордаки</div>
+  <div class="small">Думаю. Говорю. Пишу.</div>
 </footer>
 
 </body>
