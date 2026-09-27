@@ -9,59 +9,137 @@ html
 <link rel="icon" href="foto.jpg" type="image/jpeg">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;line-height:1.7;color:#222;background:#f9f9f9}
-header{background:#1a1a1a;color:#fff;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.logo{font-weight:bold;font-size:1.2rem}
-nav a{color:#ddd;margin-left:1.2rem;text-decoration:none}
+body{font-family:Georgia,'Times New Roman',serif;line-height:1.8;color:#222;background:#f4f4f2}
+header{background:#1a1a1a;color:#fff;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;position:sticky;top:0;z-index:10}
+.logo{font-weight:bold;font-size:1.15rem;letter-spacing:.5px}
+nav{display:flex;align-items:center;flex-wrap:wrap;gap:1.2rem}
+nav a{color:#ddd;text-decoration:none;font-size:.95rem}
 nav a:hover{color:#fff}
-.hero{padding:3rem 2rem;text-align:center;background:#fff;border-bottom:1px solid #eee}
-.hero h1{font-size:2rem;margin-bottom:.5rem}
-.hero p{color:#666;font-size:1.1rem}
-.container{max-width:800px;margin:0 auto;padding:2rem}
-.about,.articles{background:#fff;padding:2rem;border-radius:8px;margin-bottom:2rem}
-.about h2,.articles h2{margin-bottom:1rem}
-.about p{margin-bottom:.8rem}
-.articles ul{list-style:none}
-.articles li{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #eee}
-.articles li:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.articles a{color:#007bff;text-decoration:none;font-size:1.1rem;font-weight:bold}
-.articles a:hover{text-decoration:underline}
-.articles .date{display:block;color:#999;font-size:.85rem;margin-top:.3rem}
+.btn-add{background:#007bff;color:#fff!important;padding:.45rem 1rem;border-radius:6px;font-size:.9rem}
+.btn-add:hover{background:#0063cc}
+.hero{padding:4rem 2rem;text-align:center;background:#fff;border-bottom:1px solid #e5e5e5}
+.hero .small{font-size:1rem;letter-spacing:3px;color:#888;margin-bottom:.5rem;text-transform:uppercase}
+.hero h1{font-size:2.6rem;margin-bottom:.6rem;letter-spacing:1px}
+.hero p{color:#666;font-size:1.15rem;font-style:italic}
+.container{max-width:820px;margin:0 auto;padding:2rem 1.2rem}
+section{background:#fff;padding:2.2rem;border-radius:10px;margin-bottom:2rem;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+section h2{font-size:1.6rem;margin-bottom:1.2rem;border-bottom:2px solid #eee;padding-bottom:.6rem}
+.about p{margin-bottom:1rem}
+.about p:last-child{margin-bottom:0}
+.article{padding:2rem 0;border-bottom:1px solid #eee}
+.article:first-of-type{padding-top:0}
+.article:last-child{border-bottom:none;padding-bottom:0}
+.article h3{font-size:1.35rem;margin-bottom:.4rem;color:#111;text-transform:uppercase;letter-spacing:.5px;line-height:1.4}
+.article .date{color:#999;font-size:.85rem;display:block;margin-bottom:1.2rem;font-style:italic}
+.article p{margin-bottom:1rem}
+.article ol{margin:1rem 0 1rem 1.5rem}
+.article ol li{margin-bottom:.6rem}
+.article blockquote{border-left:3px solid #ccc;padding-left:1rem;color:#555;font-style:italic;margin:1rem 0}
+.article .closing{font-weight:bold;font-style:italic;margin-top:1.5rem}
+.add-link{display:inline-block;margin-bottom:1.2rem;color:#007bff;text-decoration:none;font-size:.95rem}
+.add-link:hover{text-decoration:underline}
 footer{text-align:center;padding:2rem;color:#888;font-size:.9rem}
-@media(max-width:600px){header{flex-direction:column;text-align:center;padding:1rem}nav a{margin:0 .6rem}.hero h1{font-size:1.6rem}.container{padding:1rem}.about,.articles{padding:1.2rem}}
+@media(max-width:600px){
+  header{flex-direction:column;text-align:center;padding:1rem}
+  nav{justify-content:center}
+  .hero{padding:2.5rem 1rem}
+  .hero h1{font-size:1.9rem}
+  .hero .small{font-size:.85rem;letter-spacing:2px}
+  .container{padding:1rem}
+  section{padding:1.4rem}
+  .article h3{font-size:1.15rem}
+}
 </style>
 </head>
 <body>
+
 <header>
-<div class="logo">Степан Иордаки</div>
-<nav>
-<a href="#about">Обо мне</a>
-<a href="#articles">Мои статьи</a>
-</nav>
+  <div class="logo">Степан Иордаки</div>
+  <nav>
+    <a href="#top">Главная</a>
+    <a href="#about">Обо мне</a>
+    <a href="#articles">Мои статьи</a>
+    <a href="#" class="btn-add">+ Добавить статью</a>
+  </nav>
 </header>
-<div class="hero">
-<h1>Думаю. Говорю. Пишу.</h1>
-<p>Авторские статьи о политике, экономике и жизни в Молдове</p>
+
+<div class="hero" id="top">
+  <div class="small">Степан Иордаки</div>
+  <h1>Думаю. Говорю. Пишу.</h1>
+  <p>Авторские статьи о политике, экономике и жизни в Молдове</p>
 </div>
+
 <div class="container">
-<section id="about" class="about">
-<h2>Обо мне</h2>
-<p>Я Степан Иордаки.</p>
-<p>Пишу о том, что вижу вокруг себя и что считаю важным для общества. Меня интересуют жизнь людей, проблемы страны, решения власти, экономика, социальные вопросы и события, которые непосредственно затрагивают каждого из нас.</p>
-<p>Не претендую на абсолютную истину. Высказываю своё мнение, задаю вопросы и стараюсь говорить прямо — без лишних украшений.</p>
-</section>
-<section id="articles" class="articles">
-<h2>Мои статьи и материалы</h2>
-<ul>
-<li>
-<a href="strizhka-ovec.html">Стрижка овец ещё не началась!</a>
-<span class="date">Дата публикации</span>
-</li>
-</ul>
-</section>
+
+  <section id="about" class="about">
+    <h2>Обо мне</h2>
+    <p>Я Степан Иордаки.</p>
+    <p>Пишу о том, что вижу вокруг себя и что считаю важным для общества.</p>
+    <p>Меня интересуют жизнь людей, проблемы страны, решения власти, экономика, социальные вопросы и события, которые непосредственно затрагивают каждого из нас.</p>
+    <p>Не претендую на абсолютную истину. Высказываю своё мнение, задаю вопросы и стараюсь говорить прямо — без лишних украшений.</p>
+    <p><em>Думаю. Говорю. Пишу.</em></p>
+  </section>
+
+  <section id="articles">
+    <h2>Мои статьи и материалы</h2>
+    <a href="#" class="add-link">+ Добавить новую статью</a>
+
+    <article class="article">
+      <h3>И реформы будут, и брошенные сёла, и …!</h3>
+      <span class="date">Добавлено 22.09.2026</span>
+
+      <p>Много разговоров об административно-территориальной реформе в обществе.</p>
+      <p>Споры не утихают: одни возмущены, другие сопротивляются, а власть либо не объясняет, либо вводит людей в заблуждение.</p>
+      <p>Оно и понятно — дело новое, непонятное, опыта нет. И как ни старайся, а ощущение, что получится как всегда — криво и через одно место. Нам это не впервой. За последние 35 лет «самостийности» особо хвастаться нечем: куда ни смотри — везде в хвосте.</p>
+      <p>Лично я не сильно переживаю и хочу высказать и своё мнение. Может, кто-то успокоится и перестанет воевать за или против очередной инициативы государства. Как ни крути, а последнее слово всё одно будет не за вами. Так уж устроен мир.</p>
+      <p>Как в кино: всё уже обдумано, решено и украдено — без вас и до вас.</p>
+      <p><strong>Народ, о чём мы спорим?</strong></p>
+      <ol>
+        <li>Когда государство начинает войну — оно спрашивает разрешения у народа? А ведь народ потом платит за это жизнью.</li>
+        <li>Покажите хоть одну революцию, где народ не страдал и не умирал.</li>
+        <li>В Молдове Президент, которого прозвали «рацы мутэ», он разве советовался с людьми?</li>
+        <li>Когда к власти пришёл «старый коммунист» и отменил жудецы, вернув районы — кто-нибудь спрашивал мнение народа?</li>
+      </ol>
+      <p>Так почему вы решили, что нынешняя власть обязана с вами советоваться?</p>
+      <p>Пора понять простую вещь: народ и власть идут параллельно. Иногда пересекаются — но ненадолго и только из интереса.</p>
+      <p>Поэтому не стоит изводить себя.</p>
+      <p>Будут вам и реформы. Будут новые решения. Будут брошенные сёла и дальнейшее ослабление страны.</p>
+      <p>Главное — мы идём в ЕС.</p>
+      <p>И напоследок. Недавно услышал у одного из руководителей:</p>
+      <blockquote>«Если в ЕС не протиснуться — есть и другие варианты».</blockquote>
+      <p>Звучит обнадёживающе.</p>
+      <p>Как чесотка: недуг неприятный, но живучий.</p>
+    </article>
+
+    <article class="article">
+      <h3>Стрижка овец ещё не началась!</h3>
+
+      <p>Для быстрого и успешного вступления в ЕС Молдова должна изменить своё законодательство под стандарты Евросоюза.</p>
+      <p>И это правильно.</p>
+      <p>Страны разные, история не одинакова, обычаи, стиль жизни, а отсюда и разброс в доме получается.</p>
+      <p>Поэтому и приходится всех стричь одинаково, установить единые правила и законы.</p>
+      <p><strong>А нужно ли менять законодательство?</strong></p>
+      <p>Да! Нужно.</p>
+      <p>И Парламенту придётся упорно работать в этом направлении.</p>
+      <p>Нет в стране ни одной сферы, где не придётся что-то менять.</p>
+      <p>Если Законы ЕС правильные и справедливые, а наши приходится в корень менять, то что это за страна и почему принимала на протяжении стольких лет такие антигуманные и антинародные правила жизни, которые никак не стыкуются с законами ЕС?</p>
+      <p>Выходит, страна давила народ своими запретами, раз сейчас вынуждена менять и аннулировать их.</p>
+      <p>По-моему, народ это не стадо, и так жестоко обращаться с ним никому не позволено, и власти надо бы ответить за содеянное.</p>
+      <p>Выходит, меняя нынешние законы, власть признаёт свои ошибки и вынуждена под давлением ЕС освободить народ из-под удушающего властного гнёта.</p>
+      <p>Не зря ЕС требует проведения реальных реформ — вот и посмотрим, насколько «наши» готовы их проводить.</p>
+      <p>Если цель — развитие и усиление государства, то реформы должны быть продуманы и честно объяснены обществу.</p>
+      <p>Если же цель — просто быстрее «отчитаться» о движении в сторону ЕС, тогда страна рискует получить лишь красивую витрину и народный гнев.</p>
+      <p>Время думать. Время задавать вопросы. Время говорить свободно.</p>
+      <p class="closing">Не верю я Вам, робяты.</p>
+    </article>
+
+  </section>
+
 </div>
+
 <footer>
-© Степан Иордаки · Думаю. Говорю. Пишу.
+  © Степан Иордаки
 </footer>
+
 </body>
 </html>
