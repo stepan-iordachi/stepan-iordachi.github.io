@@ -13,11 +13,9 @@ header{background:#1a1a1a;color:#fff;padding:1rem 2rem;display:flex;justify-cont
 .brand{display:flex;align-items:center;gap:.7rem}
 .brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid #444}
 .logo{font-weight:bold;font-size:1.15rem}
-nav{display:flex;align-items:center;flex-wrap:wrap;gap:1.2rem}
+nav{display:flex;gap:1.2rem;flex-wrap:wrap}
 nav a{color:#ddd;text-decoration:none;font-size:.95rem}
 nav a:hover{color:#fff}
-.btn-add{background:#007bff;color:#fff!important;padding:.45rem 1rem;border-radius:6px;font-size:.9rem}
-.btn-add:hover{background:#0063cc}
 .container{max-width:820px;margin:0 auto;padding:2rem 1.2rem}
 section{background:#fff;padding:2.2rem;border-radius:10px;margin-bottom:2rem}
 section h2{font-size:1.6rem;margin-bottom:1.2rem;border-bottom:2px solid #eee;padding-bottom:.6rem}
@@ -26,24 +24,18 @@ section h2{font-size:1.6rem;margin-bottom:1.2rem;border-bottom:2px solid #eee;pa
 .about-text{flex:1;min-width:240px}
 .about-text p{margin-bottom:1rem}
 .about-text p:last-child{margin-bottom:0}
-.add-link{display:inline-block;margin-bottom:1.2rem;color:#007bff;text-decoration:none;font-size:.95rem}
-.add-link:hover{text-decoration:underline}
-.article{padding:2rem 0;border-bottom:1px solid #eee}
-.article:first-of-type{padding-top:0}
-.article:last-child{border-bottom:none;padding-bottom:0}
-.article h3{font-size:1.3rem;margin-bottom:.4rem;color:#111;text-transform:uppercase;letter-spacing:.5px;line-height:1.4}
-.article .date{color:#999;font-size:.85rem;display:block;margin-bottom:1.2rem;font-style:italic}
-.article p{margin-bottom:1rem}
-.article ol{margin:1rem 0 1rem 1.5rem}
-.article ol li{margin-bottom:.6rem}
-.article blockquote{border-left:3px solid #ccc;padding-left:1rem;color:#555;font-style:italic;margin:1rem 0}
+ul.list{list-style:none}
+ul.list li{padding:1rem 0;border-bottom:1px solid #eee}
+ul.list li:last-child{border-bottom:none}
+ul.list a{color:#007bff;text-decoration:none;font-size:1.15rem;font-weight:bold;font-family:Georgia,serif}
+ul.list a:hover{text-decoration:underline}
+ul.list .date{display:block;color:#999;font-size:.85rem;font-style:italic;margin-top:.2rem;font-family:Georgia,serif}
 footer{text-align:center;padding:2rem;color:#888;font-size:.9rem}
 @media(max-width:600px){
   header{flex-direction:column;text-align:center;padding:1rem}
   nav{justify-content:center}
   .container{padding:1rem}
   section{padding:1.4rem}
-  .article h3{font-size:1.1rem}
   .about{flex-direction:column;align-items:center;text-align:center}
 }
 </style>
@@ -58,7 +50,6 @@ footer{text-align:center;padding:2rem;color:#888;font-size:.9rem}
   <nav>
     <a href="#about">Обо мне</a>
     <a href="#articles">Мои статьи</a>
-    <a href="#" class="btn-add">+ Добавить статью</a>
   </nav>
 </header>
 
@@ -78,59 +69,22 @@ footer{text-align:center;padding:2rem;color:#888;font-size:.9rem}
 
   <section id="articles">
     <h2>Мои статьи и материалы</h2>
-    <a href="#" class="add-link">+ Добавить новую статью</a>
+    <ul class="list">
 
-    <article class="article">
-      <h3>И РЕФОРМЫ БУДУТ, И БРОШЕННЫЕ СЁЛА, И …!</h3>
-      <span class="date">Добавлено 22.09.2026</span>
-      <p>Много разговоров об административно-территориальной реформе в обществе.</p>
-      <p>Споры не утихают: одни возмущены, другие сопротивляются, а власть либо не объясняет, либо вводит людей в заблуждение.</p>
-      <p>Оно и понятно — дело новое, непонятное, опыта нет. И как ни старайся, а ощущение, что получится как всегда — криво и через одно место. Нам это не впервой. За последние 35 лет «самостийности» особо хвастаться нечем: куда ни смотри — везде в хвосте.</p>
-      <p>Лично я не сильно переживаю и хочу высказать и своё мнение. Может, кто-то успокоится и перестанет воевать за или против очередной инициативы государства. Как ни крути, а последнее слово всё одно будет не за вами. Так уж устроен мир.</p>
-      <p>Как в кино: всё уже обдумано, решено и украдено — без вас и до вас.</p>
-      <p>Народ, о чём мы спорим?</p>
-      <ol>
-        <li>Когда государство начинает войну — оно спрашивает разрешения у народа? А ведь народ потом платит за это жизнью.</li>
-        <li>Покажите хоть одну революцию, где народ не страдал и не умирал.</li>
-        <li>В Молдове Президент, которого прозвали «рацы мутэ», он разве советовался с людьми?</li>
-        <li>Когда к власти пришёл «старый коммунист» и отменил жудецы, вернув районы — кто-нибудь спрашивал мнение народа?</li>
-      </ol>
-      <p>Так почему вы решили, что нынешняя власть обязана с вами советоваться?</p>
-      <p>Пора понять простую вещь: народ и власть идут параллельно. Иногда пересекаются — но ненадолго и только из интереса.</p>
-      <p>Поэтому не стоит изводить себя.</p>
-      <p>Будут вам и реформы. Будут новые решения. Будут брошенные сёла и дальнейшее ослабление страны.</p>
-      <p>Главное — мы идём в ЕС.</p>
-      <p>И напоследок. Недавно услышал у одного из руководителей:</p>
-      <blockquote>«Если в ЕС не протиснуться — есть и другие варианты».</blockquote>
-      <p>Звучит обнадёживающе.</p>
-      <p>Как чесотка: недуг неприятный, но живучий.</p>
-    </article>
+      <!-- ↓↓↓ СЮДА ДОБАВЛЯЙ НОВЫЕ СТАТЬИ. Одна строка = одна статья ↓↓↓ -->
 
-    <article class="article">
-      <h3>СТРИЖКА ОВЕЦ ЕЩЁ НЕ НАЧАЛАСЬ!</h3>
-      <p>Для быстрого и успешного вступления в ЕС Молдова должна изменить своё законодательство под стандарты Евросоюза.</p>
-      <p>И это правильно.</p>
-      <p>Страны разные, история не одинакова, обычаи, стиль жизни, а отсюда и разброс в доме получается.</p>
-      <p>Поэтому и приходится всех стричь одинаково, установить единые правила и законы.</p>
-      <p>А нужно ли менять законодательство?</p>
-      <p>Да! Нужно.</p>
-      <p>И Парламенту придётся упорно работать в этом направлении.</p>
-      <p>Нет в стране ни одной сферы, где не придётся что-то менять.</p>
-      <p>Если Законы ЕС правильные и справедливые, а наши приходится в корень менять, то что это за страна и почему принимала на протяжении стольких лет такие антигуманные и антинародные правила жизни, которые никак не стыкуются с законами ЕС?</p>
-      <p>Выходит, страна давила народ своими запретами, раз сейчас вынуждена менять и аннулировать их.</p>
-      <p>По-моему, народ это не стадо, и так жестоко обращаться с ним никому не позволено, и власти надо бы ответить за содеянное.</p>
-      <p>Выходит, меняя нынешние законы, власть признаёт свои ошибки и вынуждена под давлением ЕС освободить народ из-под удушающего властного гнёта.</p>
-      <p>Не зря ЕС требует проведения реальных реформ — вот и посмотрим, насколько «наши» готовы их проводить.</p>
-      <p>Если цель — развитие и усиление государства, то реформы должны быть продуманы и честно объяснены обществу.</p>
-      <p>Если же цель — просто быстрее «отчитаться» о движении в сторону ЕС, тогда страна рискует получить лишь красивую витрину и народный гнев.</p>
-      <p>Время думать. Время задавать вопросы. Время говорить свободно.</p>
-      <p>Не верю я Вам, робяты.</p>
-    </article>
-<h3>ЗАГОЛОВОК НОВОЙ СТАТЬИ</h3>
-      <span class="date">Добавлено 01.10.2026</span>
-      <p>Первый абзац текста.</p>
-      <p>Второй абзац текста.</p>
-      <p>Третий абзац — сколько нужно.</p>
+      <li>
+        <a href="reformy.html">И РЕФОРМЫ БУДУТ, И БРОШЕННЫЕ СЁЛА, И …!</a>
+        <span class="date">Добавлено 22.09.2026</span>
+      </li>
+
+      <li>
+        <a href="strizhka-ovec.html">СТРИЖКА ОВЕЦ ЕЩЁ НЕ НАЧАЛАСЬ!</a>
+      </li>
+
+      <!-- ↑↑↑ КОНЕЦ СПИСКА СТАТЕЙ ↑↑↑ -->
+
+    </ul>
   </section>
 
 </div>
