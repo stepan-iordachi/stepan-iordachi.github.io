@@ -10,6 +10,8 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,'Times New Roman',serif;line-height:1.8;color:#222;background:#f4f4f2}
 header{background:#1a1a1a;color:#fff;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid #444}
 .logo{font-weight:bold;font-size:1.15rem}
 nav{display:flex;align-items:center;flex-wrap:wrap;gap:1.2rem}
 nav a{color:#ddd;text-decoration:none;font-size:.95rem}
@@ -54,7 +56,10 @@ footer{text-align:center;padding:2rem;color:#888;font-size:.9rem}
 <body>
 
 <header>
-  <div class="logo">Степан Иордаки</div>
+  <div class="brand">
+    <img src="foto.jpg" alt="Степан Иордаки">
+    <span class="logo">Степан Иордаки</span>
+  </div>
   <nav>
     <a href="#top">Главная</a>
     <a href="#about">Обо мне</a>
